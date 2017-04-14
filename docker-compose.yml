@@ -13,3 +13,9 @@ services:
     depends_on:
       - redis
 
+  dashboard:
+    build: dashboard
+    env_file:
+      - "${ENV_FILE:-.env}"
+    ports:
+      - 9292:9292
